@@ -91,7 +91,6 @@ class ViewController: UIViewController {
         hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(hideKenny), userInfo: nil, repeats: true)
         
         hideKenny()
-        
     }
     
     @objc func hideKenny(){
@@ -102,7 +101,6 @@ class ViewController: UIViewController {
         let random = Int(arc4random_uniform(UInt32(kennyrArray.count - 1)))
         
         kennyrArray[random].isHidden = false
-        
     }
     
     @objc func increaseScore(){
@@ -148,11 +146,7 @@ class ViewController: UIViewController {
             alert.addAction(replayButton)
             
             self.present(alert, animated: true, completion: nil)
-            
         }
-        
     }
-
-
 }
 
